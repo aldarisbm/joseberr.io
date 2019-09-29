@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', () => {
 
   let intro = document.getElementById('intro')
   let github = document.getElementById('github')
