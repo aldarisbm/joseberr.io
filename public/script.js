@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let linkedin = document.getElementById('linkedin')
 
   let introString = 'Software Developer / Cloud Engineer'
-  let githubLink = '<a href="https://www.github.com/aldarisbm">GitHub</a>'
-  let linkedinLink = '<a href="https://www.linkedin.com/in/aldarisbm/">LinkedIn</a>' 
+  let githubLink = '<a href="https://www.github.com/aldarisbm" target="_blank">GitHub</a>'
+  let linkedinLink = '<a href="https://www.linkedin.com/in/aldarisbm/" target="_blank">LinkedIn</a>' 
 
   let introLength = introString.length
   let i = 0
