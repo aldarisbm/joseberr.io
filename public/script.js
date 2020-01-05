@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let github = document.getElementById('github')
   let linkedin = document.getElementById('linkedin')
 
-  let introString = 'Software Developer / Cloud Engineer'
+  let introString = 'Cloud Engineer / Software Developer'
   let githubLink = '<a href="https://www.github.com/aldarisbm" target="_blank">GitHub</a>'
   let linkedinLink = '<a href="https://www.linkedin.com/in/aldarisbm/" target="_blank">LinkedIn</a>' 
 
