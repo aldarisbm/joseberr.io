@@ -1,32 +1,50 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  let intro = document.getElementById('intro')
-  let github = document.getElementById('github')
-  let linkedin = document.getElementById('linkedin')
+  let introDom = document.getElementById('intro')
+  let githubDom = document.getElementById('github')
+  let linkedInDom = document.getElementById('linkedIn')
 
   let introString = 'Cloud Engineer / Software Developer'
-  let githubLink = '<a href="https://www.github.com/aldarisbm" target="_blank">GitHub</a>'
-  let linkedinLink = '<a href="https://www.linkedin.com/in/aldarisbm/" target="_blank">LinkedIn</a>' 
+  let Github = {
+    link : "https://www.github.com/aldarisbm",
+    name : "GitHub"
+  }
+
+  let LinkedIn = {
+    link : "https://www.linkedin.com/in/aldarisbm",
+    name : "LinkedIn"
+  }
+
+  let githubLink = `<a href="${Github.link}" target="_blank">${Github.name}</a>`
+  let linkedInLink = `<a href="${LinkedIn.link}" target="_blank">${LinkedIn.name}</a>`
 
   let introLength = introString.length
   let i = 0
   let isTicking = true
   let intervalId = setInterval(printIntro, 150)
+  let hasRun = false
 
   function printIntro(){
-    switch (introLength) {
-      case i < introLength:
-        intro.innerHTML = intro.innerHTML + introString.charAt(i)
+    switch (true) {
+      case (i < introLength):
+        introDom.innerHTML += introString.charAt(i)
         i++
-      case i == introLength:
+        break
+      case (i == introLength && !hasRun):
+        // Only needs to run once, sets two timeouts for the links to appear on the screen
         setTimeout(() => {
-          github.innerHTML = githubLink
+          githubDom.innerHTML = githubLink
         }, 1000)
         setTimeout(() => {
-          linkedin.innerHTML = linkedinLink
+          linkedInDom.innerHTML = linkedInLink
         }, 1750)
+        // clears the interval which is faster and resets a slower one for the ticking underscore
         clearInterval(intervalId)
         setInterval(printIntro, 500)
+        hasRun = true
+        console.log("Thanks for checking out my page, you can also reach me directly at me@joseberr.io")
+        break
+      case (i == introLength && hasRun):
         if (isTicking) {
           intro.innerHTML = introString + '_'
           isTicking = false
@@ -34,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
           intro.innerHTML = introString + '&nbsp;&nbsp;'
           isTicking = true
         }
+        break
     }
   }
 })
