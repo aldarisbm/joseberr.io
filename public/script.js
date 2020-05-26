@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           linkedInDom.innerHTML = linkedInLink
         }, 1750)
-        // clears the interval which is faster and resets a slower one for the ticking underscore
+        // clears the original interval and resets it to a slower one for the ticking underscore
         clearInterval(intervalId)
         setInterval(printIntro, fasterInterval)
         hasRun = true
