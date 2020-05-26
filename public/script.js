@@ -10,14 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let introLength = introString.length
   let i = 0
-  let tick = true
+  let isTicking = true
   let intervalId = setInterval(printIntro, 150)
 
   function printIntro(){
-    if (i < introLength) {
-      intro.innerHTML = intro.innerHTML + introString.charAt(i)
-      i++
-      if (i == introLength) {
+    switch (introLength) {
+      case i < introLength:
+        intro.innerHTML = intro.innerHTML + introString.charAt(i)
+        i++
+      case i == introLength:
         setTimeout(() => {
           github.innerHTML = githubLink
         }, 1000)
@@ -26,13 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1750)
         clearInterval(intervalId)
         setInterval(printIntro, 500)
-      }
-    } else if (i == introLength && tick) {
-      intro.innerHTML = introString + '_'
-      tick = false
-    } else {
-      intro.innerHTML = introString + '&nbsp;&nbsp;'
-      tick = true
+        if (isTicking) {
+          intro.innerHTML = introString + '_'
+          isTicking = false
+        } else {
+          intro.innerHTML = introString + '&nbsp;&nbsp;'
+          isTicking = true
+        }
     }
   }
 })
