@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let linkedInDom = document.getElementById('linkedIn')
   let stackOverflowDom = document.getElementById('stackOverflow')
 
-  let introString = 'Cloud, DevOps, & Security Engineer'
+  let introString = 'Cloud, DevOps, & Site Reliability Engineer'
 
   let Github = {
     link: 'https://www.github.com/aldarisbm',
