@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(intervalId)
         setInterval(printIntro, fasterInterval)
         hasRun = true
-        console.log('Thanks for checking out my page, you can also reach me directly at me@joseberr.io')
+        console.log('Thanks for checking out my page, you can also reach me directly at aldarisbm@gmail.com')
         break
       case (i == introLen && hasRun):
         if (isTicking) {
