@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let linkedInDom = document.getElementById('linkedIn')
   let stackOverflowDom = document.getElementById('stackOverflow')
 
-  let introString = 'Cloud, DevOps, & Site Reliability Engineer'
+  let introString = 'Cloud & Software Engineer - GenAI Enthusiast'
 
   let Github = {
     link: 'https://www.github.com/aldarisbm',
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const introLen = introString.length
   const slowerInterval = 150
-  const fasterInterval = 500
+  const fasterInterval = 600
   const intervalId = setInterval(printIntro, slowerInterval)
 
   let i = 0
