@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "jose-berrio"
-  }
+    "default": "jose-berrio",
+    "prod": "iojoseberr"
+  },
+  "targets": {},
+  "etags": {}
 }
